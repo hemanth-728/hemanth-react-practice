@@ -1,0 +1,23 @@
+.footer-email-signup {
+ position: fixed;
+ bottom: 0;
+ background: yellowgreen;
+ margin: auto;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ height: 60px;
+}
+
+.footer-email-signup input[type="email"] {
+  background: #b4e142;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.email-label {
+  margin-top: 22px;
+  font-size: 24px;
+}

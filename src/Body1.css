@@ -1,0 +1,30 @@
+#body-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+table {
+    z-index: 1000;
+    border: 1px solid #333;
+    border-collapse: collapse;
+}
+
+table td, table th {
+  border: 1px solid #333;
+  font-size: 20px;
+  padding: 8px 12px;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.percent-label {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 55px;
+}
+
+#percentIncrease {
+   width: 30%;
+   margin: auto;
+}
+

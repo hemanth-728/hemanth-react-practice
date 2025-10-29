@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.menu-class {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  background: yellowgreen;
+  margin: 0;
+  padding: 0;
+  height: 40px;
+}
+
+.menu-class > li {
+  margin-top: 10px;
+}

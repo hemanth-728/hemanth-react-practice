@@ -1,25 +1,69 @@
-import logo from './logo.svg';
+import Header1 from './Header1';
+import Footer1 from './Footer1';
+import Body1 from './Body1';
 import './App.css';
 
+
+function updatePercentValues() {
+  let userInputValue = parseFloat(document.getElementById("percentIncrease").value);
+  let allPercentValues = document.querySelectorAll('.percent-val');
+
+  allPercentValues.forEach(function(element) {
+    // Store original value if not already stored
+    if (!element.hasAttribute('data-original-value')) {
+      element.setAttribute('data-original-value', element.textContent);
+    }
+  });
+
+  if (!isNaN(userInputValue)) {
+    allPercentValues.forEach(function(element) {
+      let originalValue = parseFloat(element.getAttribute('data-original-value').trim());
+      let newValue = originalValue + userInputValue;
+      element.textContent = newValue;
+    });
+  } else {
+    allPercentValues.forEach(function(element) {
+      element.textContent = element.getAttribute('data-original-value');
+    });
+  }
+}
+
+let eductionInfo = [
+  {
+    'sno' : 1,
+    'University': 'JJVM',
+    'Class': 10,
+    'Percentage': 86
+  },
+  {
+    'sno' : 2,
+    'University': 'SJJC',
+    'Class': 12,
+    'Percentage': 95.4
+  },
+  {
+  'sno' : 3,
+  'University': 'YITS',
+  'Class': 16,
+  'Percentage': 75.4
+  }
+]
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+return (
+  <>
+    <Header1/>
+    <Body1 info={eductionInfo}>
+      <label htmlFor='percentIncrease' className='percent-label'>
+        Provide How much percentage you would like to increase?
+      </label>
+      <input type='number' id="percentIncrease" onChange={updatePercentValues}/>
+
+    </Body1>
+    <Footer1/>
+  </>
+)
+
 }
 
 export default App;
