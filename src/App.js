@@ -19,7 +19,11 @@ function updatePercentValues() {
     allPercentValues.forEach(function(element) {
       let originalValue = parseFloat(element.getAttribute('data-original-value').trim());
       let newValue = originalValue + userInputValue;
-      element.textContent = newValue;
+      if (newValue > 100) {
+
+      } else {
+        element.textContent = newValue;
+      }
     });
   } else {
     allPercentValues.forEach(function(element) {
