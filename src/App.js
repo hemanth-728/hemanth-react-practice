@@ -3,6 +3,8 @@ import Footer1 from './Footer1';
 import Body1 from './Body1';
 import Body2 from './Body2';
 import Body3 from './Body3';
+import Product1 from './Product1';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import './App.css';
 
 
@@ -59,8 +61,7 @@ let eductionInfo = [
 function App() {
 return (
   <>
-    <Header1/>
-    <Body1 info={eductionInfo}>
+    {/* <Body1 info={eductionInfo}>
       <label htmlFor='percentIncrease' className='percent-label'>
         Provide How much percentage you would like to increase?
       </label>
@@ -68,8 +69,17 @@ return (
 
     </Body1>
      <Body2 initialvalue={0}/>
-     <Body3></Body3>
+     <Body3></Body3> */}
+    <BrowserRouter>
+    <Header1/>
     <Footer1/>
+        <Routes>
+            <Route path="/men" element={<Product1 />} />
+            <Route path="/women" element={<Product1 />} />
+            <Route path="/kids-boys" element={<Product1 />} />
+            <Route path="/kids-girls" element={<Product1 />} />
+        </Routes>
+    </BrowserRouter>
   </>
 )
 

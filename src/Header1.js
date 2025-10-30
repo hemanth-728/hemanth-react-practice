@@ -1,15 +1,23 @@
-import './Header1.css'
+import './Header1.css';
+import Product1 from './Product1';
+import {BrowserRouter, Route, Link, Routes} from 'react-router-dom';
+
 
 function Header1() {
     return (
         <ul className='menu-class'>
-            <li> Men </li>
-            <li> Women </li>
-            <li> Kids-Boys </li>
-            <li> Kids-Girls </li>
+            <li> <Link to="/">Home</Link> </li>
+            <li> <Link to="/men">Men</Link> </li>
+            <li> <Link to="/women">Women</Link> </li>
+            <li> <Link to="/kids-boys">Kids-Boys</Link> </li>
+            <li> <Link to="/kids-girls">Kids-Girls</Link> </li>
         </ul>
     )
 
 }
 
 export default Header1
+
+// naku men click chester /men ki vellali ani Link use chestanu
+// /men anedi path lo kanipistey dani xyz component render cheyli ani route use cheskuntanu
+// Browser route anedi only root level use cheyali
