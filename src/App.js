@@ -1,6 +1,8 @@
 import Header1 from './Header1';
 import Footer1 from './Footer1';
 import Body1 from './Body1';
+import Body2 from './Body2';
+import Body3 from './Body3';
 import './App.css';
 
 
@@ -53,6 +55,7 @@ let eductionInfo = [
   }
 ]
 
+
 function App() {
 return (
   <>
@@ -64,6 +67,8 @@ return (
       <input type='number' id="percentIncrease" onChange={updatePercentValues}/>
 
     </Body1>
+     <Body2 initialvalue={0}/>
+     <Body3></Body3>
     <Footer1/>
   </>
 )
