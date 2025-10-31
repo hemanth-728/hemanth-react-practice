@@ -4,7 +4,12 @@ import Body1 from './Body1';
 import Body2 from './Body2';
 import Body3 from './Body3';
 import Product1 from './Product1';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import User1 from './User1'
+import User2 from './User2'
+import User3 from './User3'
+import User4 from './User4'
+import Home1 from './Home1'
+import {BrowserRouter, Routes, Route, useParams, useLocation} from 'react-router-dom';
 import './App.css';
 
 
@@ -72,8 +77,12 @@ return (
      <Body3></Body3> */}
     <BrowserRouter>
     <Header1/>
+    
     <Footer1/>
         <Routes>
+            <Route path="/" element={<Home1 />} >
+              <Route path="user/:ad" element={<User1 />} />
+            </Route>
             <Route path="/men" element={<Product1 />} />
             <Route path="/women" element={<Product1 />} />
             <Route path="/kids-boys" element={<Product1 />} />

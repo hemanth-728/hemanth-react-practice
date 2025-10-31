@@ -1,6 +1,5 @@
 import './Header1.css';
-import Product1 from './Product1';
-import {BrowserRouter, Route, Link, Routes} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 
 function Header1() {
