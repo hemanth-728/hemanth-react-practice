@@ -10,6 +10,7 @@ function Header1() {
             <li> <Link to="/women">Women</Link> </li>
             <li> <Link to="/kids-boys">Kids-Boys</Link> </li>
             <li> <Link to="/kids-girls">Kids-Girls</Link> </li>
+            <li> <Link to="/practice/1/hemanth">Practice</Link> </li>
         </ul>
     )
 

@@ -4,13 +4,20 @@ import Body1 from './Body1';
 import Body2 from './Body2';
 import Body3 from './Body3';
 import Product1 from './Product1';
-import User1 from './User1'
-import User2 from './User2'
-import User3 from './User3'
-import User4 from './User4'
-import Home1 from './Home1'
+import User1 from './User1';
+import Practice1 from './Practice1';
+import User2 from './User2';
+import User3 from './User3';
+import User4 from './User4';
+import Home1 from './Home1';
 import {BrowserRouter, Routes, Route, useParams, useLocation} from 'react-router-dom';
 import './App.css';
+import { createContext } from 'react';
+export const contextValues = createContext();
+let p = {
+  id : '1',
+  name: 'Hemanth'
+}
 
 
 function updatePercentValues() {
@@ -62,6 +69,7 @@ let eductionInfo = [
   }
 ]
 
+// Here we must use value as it is inside contextProvider <Route path="/practice" element={<Practice1 value={p}> </Practice1>} />
 
 function App() {
 return (
@@ -87,6 +95,11 @@ return (
             <Route path="/women" element={<Product1 />} />
             <Route path="/kids-boys" element={<Product1 />} />
             <Route path="/kids-girls" element={<Product1 />} />
+            <Route path="/practice" element={
+                <contextValues.Provider value={p}>
+                    <Practice1 />
+                </contextValues.Provider>
+            } />
         </Routes>
     </BrowserRouter>
   </>
